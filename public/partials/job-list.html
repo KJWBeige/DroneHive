@@ -1,0 +1,13 @@
+<h2 ng-show="jobsCtrl.jobs.length">My Jobs:</h2>
+<div class="list-group">
+	<a ng-repeat="job in jobsCtrl.jobs" href="#/jobs/{{ job._id }}" class="list-group-item">
+  		<h3 class="list-group-item-heading">{{ job.title }} {{ job.company }}</h3>
+  		<p class="list-group-item-text">{{ job.location }}</p>
+			<p ng-show="!job.resumeDate">Resume has not yet been submitted</p><br>
+				<span ng-show="job.resumeDate">You submitted your resume on {{ job.resumeDate}}</span><br>
+				<span ng-show="job.resumeDate">
+					<span ng-show="job.recentUpdate">You haven't heard from the recruiter since {{ job.recentUpdate }}</span>
+					<span ng-show="!job.recentUpdate">You haven't heard from the recruiter yet</span>
+				</span>
+  	</a>
+</div>

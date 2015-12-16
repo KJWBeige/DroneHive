@@ -1,0 +1,27 @@
+<div class="row col-md-6 col-md-offset-3" >
+
+	<div class="jumbotron">
+		<h1>Login</h1>
+		
+		<form ng-submit="login.doLogin()">
+
+			<div class="form-group">
+				<label>Username</label>
+				<input type="text" class="form-control" ng-model="login.loginData.username" >
+			</div>
+
+			<div class="form-group">
+				<label>Password</label>
+				<input type="password" class="form-control" ng-model="login.loginData.password">
+			</div>
+
+
+
+			<button type="submit" class="btn btn-block btn-primary">
+				<span >Login</span>
+			</button>
+
+		</form>
+	</div>
+
+</div>

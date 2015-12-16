@@ -1,0 +1,54 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h3 class="panel-title">Add A New Job</h3></div>
+	<div class="panel-body">
+		<form id="new-Job-form" ng-submit="jobsCtrl.addJob(jobsCtrl.newJob.title,jobsCtrl.newJob.company,jobsCtrl.newJob.location, jobsCtrl.newJob.description, jobsCtrl.newJob.link, jobsCtrl.newJob.contact, jobsCtrl.newJob.phone, jobsCtrl.newJob.notes, jobsCtrl.newJob.resumeDate, jobsCtrl.newJob.recentUpdate, jobsCtrl.newJob.updateNotes, main.user.username)">
+			<div class="form-group">
+					<label>Job Title:</label>
+		    	<input type="text" name="make" ng-model="jobsCtrl.newJob.title" placeholder="Title" class="form-control" required>
+		    </div>
+			<div class="form-group">
+				<label>Company</label>
+				<input type="text" name="model" ng-model="jobsCtrl.newJob.company" placeholder="Company" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>Location</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.location" placeholder="Location" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.description" placeholder="Description" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Job Link</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.link" placeholder="Link to job" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Contact</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.contact" placeholder="Contact" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Phone Number</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.phone" placeholder="Phone Number" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Notes</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.notes" placeholder="Notes" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Resume submitted on</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.resumeDate" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Most recent update from employer</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.recentUpdate" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Notes about the most recent update from employer</label>
+				<input type="text" name="year" ng-model="jobsCtrl.newJob.updateNotes" placeholder="What was the most recent update about?" class="form-control">
+			</div>
+			<div class="text-center">
+			<button type="submit" class="btn btn-info btn-block">Add Job</button>
+			</div>
+		</form>
+	</div>
+</div>
