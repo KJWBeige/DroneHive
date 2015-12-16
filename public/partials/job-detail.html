@@ -1,18 +1,18 @@
 <div class="panel panel-default" ng-hide="jobDetailCtrl.editing || jobDetailCtrl.status || jobDetailCtrl.resume">
 	<div class="panel-heading">
-		<h1>Title: {{ jobDetailCtrl.job.title }}</h3>
+		<h1>Number Of Rotors: {{ jobDetailCtrl.job.title }}</h3>
 	</div>
 	<div class="panel-body">
-		<h3><strong>Company</strong>: {{ jobDetailCtrl.job.company }}</h3>
+		<h3><strong>Brand</strong>: {{ jobDetailCtrl.job.company }}</h3>
 		<h3><strong>Location</strong>: {{ jobDetailCtrl.job.location }}</h3>
 		<h3><strong>Description</strong>: {{ jobDetailCtrl.job.description }}</h3>
-		<a ng-show="jobDetailCtrl.job.link" href="{{ jobDetailCtrl.job.link }}"> Job Link</a>
+		<a ng-show="jobDetailCtrl.job.link" href="{{ jobDetailCtrl.job.link }}"> Link To Similar Models</a>
 		<h3><strong>Contact</strong>: {{ jobDetailCtrl.job.contact }}</h3>
 		<h3><strong>Phone</strong>: {{ jobDetailCtrl.job.phone }}</h3>
 		<h3><strong>Notes</strong>: {{ jobDetailCtrl.job.notes }}</h3>
-		<h3><strong>Resume was submitted on </strong>: {{ jobDetailCtrl.job.resumeDate}}</h3>
-		<h3><strong>The most recent update from the employer is on</strong>: {{ jobDetailCtrl.job.recentUpdate}}</h3>
-		<h3><strong>The most recent update was about: </strong>: {{ jobDetailCtrl.job.updateNotes }}</h3>
+		<h3><strong>Date Of Submission </strong>: {{ jobDetailCtrl.job.resumeDate}}</h3>
+		<h3><strong>Estimated Purpose</strong>: {{ jobDetailCtrl.job.recentUpdate}}</h3>
+		<h3><strong>Flight Behavior </strong>: {{ jobDetailCtrl.job.updateNotes }}</h3>
 	</div>
 
 
