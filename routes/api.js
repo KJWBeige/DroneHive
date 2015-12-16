@@ -1,11 +1,11 @@
 var
 	express 	 	= require('express'),
-	apiRouter  	= express.Router(),
+	apiRouter  		= express.Router(),
 	mongoose 	 	= require('mongoose'),
-	Job 			 	= require('../models/job.js'),
-	User 			 	= require('../models/user.js'),
-	jwt        	= require('jsonwebtoken'),
-	superSecret	= 'frijoles'
+	Job 			= require('../models/job.js'),
+	User 			= require('../models/user.js'),
+	jwt        		= require('jsonwebtoken'),
+	superSecret		= 'frijoles'
 
 apiRouter.get('/', function(req,res){
 	res.json({message: "Api routes are working."})
