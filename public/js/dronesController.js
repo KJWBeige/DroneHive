@@ -31,9 +31,10 @@
 
 
 		// controller method for adding a new drone, this gets invoked when user hits 'submit' button.
-		self.addDrone = function(rotors,company,location, altitude, description, link, contact, phone, notes, viewDate, recentUpdate, updateNotes, owner){
+		self.addDrone = function(rotors,company,location,altitude, description, link, contact, phone, notes, viewDate, recentUpdate, updateNotes, owner){
 			var data = {rotors: rotors, company: company, location: location, altitude: altitude, description: description, link: link, contact: contact, phone: phone, notes: notes, viewDate: viewDate, recentUpdate: recentUpdate, updateNotes: updateNotes, owner: owner}
 			// run the drone factory's addDrone method to send the POST request with the data object we just created
+			console.log(data)
 			self.api.addDrone(data).then(function success(response){
 				// when we successfully finish the POST request, take the server's response (the new drone) and add it to this controller's drone list, which updates the front-end with the new drone.
 				// clear this controller's 'newDrone' object out, which clears the input fields on the front-end
@@ -44,7 +45,7 @@
 				// $window.document.querySelectorAll('#new-drone-form input')[0].focus()
 			})
 		}
-		
+		// below is to use D3 for displaying the altitude data in bar chart form
 		d3.json('/api/Kevin/drones', function(error, data){
 			var altitudes = []
   			if(error) throw error
@@ -69,17 +70,16 @@
 				.enter() //entering the data set to drill
 				.append("rect") //appending a rectangle for each altitude
 				.attr("x", function(d, i){
-				 	return i*42
+				 	return i*(w/altitudes.length)
 				}) //initial set of x axis
 				.attr("y",0) //initial set of y axis
-				.attr("width", 20) //initial width of rect
+				.attr("width", 20) //initial width of the rectangle
 				.attr("height", function(d, i){
 					return d/10
-				}) //inital height of rect		
-			
-			
+				}) //inital height of the rectangle		
 		})
 	}
+	
 
 	function droneDetailController(drones,$routeParams,$location){
 		var self = this

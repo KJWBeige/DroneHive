@@ -20,9 +20,10 @@ apiRouter.route('/drones')
 	})
 	.post(function(req,res){
 		var newDrone = new Drone()
-		newDrone.title = req.body.title
+		newDrone.rotors = req.body.rotors
 		newDrone.company = req.body.company
 		newDrone.location = req.body.location
+		newDrone.altitude = req.body.altitude
 		newDrone.description = req.body.description
 		newDrone.link = req.body.link
 		newDrone.contact = req.body.contact
