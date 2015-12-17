@@ -58,8 +58,8 @@
 			console.log(altitudes)
 			
 			//Width and height
-			var w = 700
-			var h = 100
+			var w = 600
+			var h = 130
 			var barPadding = 1
 			
 			var svg = d3.select("div.chart-goes-here") //selecting entire div from D3
@@ -79,7 +79,27 @@
 				.attr("width", w/altitudes.length - barPadding) //to fill the width with rectangles
 				.attr("height", function(d){
 					return d/10
-				}) //inital height of the rectangle		
+				}) //inital height of the rectangle	
+			svg.selectAll("text")	
+				.data(altitudes)
+				.enter()
+				.append("text")
+				.text(function(d){
+					return d
+				})
+				.attr("x", function(d, i){
+				 	return i*(w/altitudes.length) + 40
+				}) 
+				.attr("y", function(d){
+					return h - d/10 +15
+				})	
+				.attr("font-family", "sans-serif") //setting font of display number
+				.attr("font-size", "11px")         //setting size of display number
+				.attr("fill", "white")            //setting color of display number
+				.attr("text-anchor", "middle")    //anchoring in midde of bar
+				.attr("y", function(d){
+					return h - d/10 + 16  		  //bringing labels up one pixel for perfect spacing
+				})
 		})
 	}
 	
