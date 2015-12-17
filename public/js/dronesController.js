@@ -58,8 +58,9 @@
 			console.log(altitudes)
 			
 			//Width and height
-			var w = 500
+			var w = 700
 			var h = 100
+			var barPadding = 1
 			
 			var svg = d3.select("div.chart-goes-here") //selecting entire div from D3
 						.append("svg") //appending SVG to the body
@@ -72,9 +73,11 @@
 				.attr("x", function(d, i){
 				 	return i*(w/altitudes.length)
 				}) //initial set of x axis
-				.attr("y",0) //initial set of y axis
-				.attr("width", 20) //initial width of the rectangle
-				.attr("height", function(d, i){
+				.attr("y", function(d){
+					return h - d/10
+				}) //height minus datavalue
+				.attr("width", w/altitudes.length - barPadding) //to fill the width with rectangles
+				.attr("height", function(d){
 					return d/10
 				}) //inital height of the rectangle		
 		})

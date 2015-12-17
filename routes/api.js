@@ -30,7 +30,7 @@ apiRouter.route('/drones')
 		newDrone.phone = req.body.phone
 		newDrone.notes = req.body.notes
 		newDrone.owner = req.body.owner
-		newDrone.resumeDate = req.body.viewDate
+		newDrone.viewDate = req.body.viewDate
 		newDrone.recentUpdate = req.body.recentUpdate
 		newDrone.updateNotes = req.body.updateNotes
 		newDrone.save(function(err, drone){
