@@ -2,11 +2,11 @@
 This is the **DroneHive** app.  The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create & Destroy on Users.
 
 ####Use Cases
-| Commercial    |   Hobbyists   |     Gov't    |
-| ------------- |:-------------:| -----------: |
-|   Amazon      |   Backyard    |    Police    |
-|   Tesla       |   Organized   | Park Service |
-|   Other       |   Other       |   Emergency  |
+| Commercial    |    Hobbyists   |    Gov't     |
+| ------------- |:--------------:| ------------:|
+|   Amazon      |    Backyard    |    Police    |
+|   Tesla       |    Organized   | Park Service |
+|   Other       |    Other       |   Emergency  |
 
 ###WHAT YOU WILL NEED 
 1. npm install
