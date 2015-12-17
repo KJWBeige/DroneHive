@@ -44,6 +44,41 @@
 				// $window.document.querySelectorAll('#new-drone-form input')[0].focus()
 			})
 		}
+		
+		d3.json('/api/Kevin/drones', function(error, data){
+			var altitudes = []
+  			if(error) throw error
+ 		 	console.log(data)
+			//altitudes = [260, 140, 230]
+			// using map
+			altitudes = data.map(function(drone){
+				return drone.altitude
+			})
+			console.log(altitudes)
+			
+			//Width and height
+			var w = 500
+			var h = 100
+			
+			var svg = d3.select("div.chart-goes-here") //selecting entire div from D3
+						.append("svg") //appending SVG to the body
+						.attr("width", w) //setting the width of the svg
+						.attr("height", h) //setting the height of the svg
+			svg.selectAll("rect")
+				.data(altitudes) //set the data source to be the array of altitudes
+				.enter() //entering the data set to drill
+				.append("rect") //appending a rectangle for each altitude
+				.attr("x", function(d, i){
+				 	return i*42
+				}) //initial set of x axis
+				.attr("y",0) //initial set of y axis
+				.attr("width", 20) //initial width of rect
+				.attr("height", function(d, i){
+					return d/10
+				}) //inital height of rect		
+			
+			
+		})
 	}
 
 	function droneDetailController(drones,$routeParams,$location){
