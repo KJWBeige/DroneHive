@@ -1,8 +1,8 @@
 (function() {
 	'use strict';
-	angular.module('jobs', [])
+	angular.module('drones', [])
 		.directive('navBar', navBar)
-		.directive('jobForm', jobForm)
+		.directive('droneForm', droneForm)
 		.filter('reverse', reverse)
 
 
@@ -12,10 +12,10 @@
 		};
 	}
 
-	function jobForm(){
+	function droneForm(){
 		var directive = {
 			restrict: 'E',
-			templateUrl: '/partials/job-form.html'
+			templateUrl: '/partials/drone-form.html'
 		}
 		return directive
 	}

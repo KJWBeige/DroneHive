@@ -2,25 +2,25 @@
 	'use strict';
 
 	angular.module('app.routes', [ 'ngRoute' ])
-		.config(['$routeProvider', '$locationProvider', jobRoutes])
+		.config(['$routeProvider', '$locationProvider', droneRoutes])
 
-		function jobRoutes($routeProvider, $locationProvider){
+		function droneRoutes($routeProvider, $locationProvider){
 			$routeProvider
-					.when('/jobs/new', {
-						templateUrl: 'partials/job-form.html',
-						controller: 'jobsController',
-						controllerAs: 'jobsCtrl'
+					.when('/drones/new', {
+						templateUrl: 'partials/drone-form.html',
+						controller: 'dronesController',
+						controllerAs: 'dronesCtrl'
 					})
-					.when('/jobs/:jobId', {
-						templateUrl: 'partials/job-detail.html',
-						controller: 'jobDetailController',
-						controllerAs: 'jobDetailCtrl'
+					.when('/drones/:droneId', {
+						templateUrl: 'partials/drone-detail.html',
+						controller: 'droneDetailController',
+						controllerAs: 'droneDetailCtrl'
 					})
 
-		      .when('/:username/jobs', {
-		        templateUrl: 'partials/job-list.html',
-		        controller: 'jobsController',
-		        controllerAs: 'jobsCtrl'
+		      .when('/:username/drones', {
+		        templateUrl: 'partials/drone-list.html',
+		        controller: 'droneController',
+		        controllerAs: 'dronesCtrl'
 		      })
 
 					// login page

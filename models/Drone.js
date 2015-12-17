@@ -2,7 +2,7 @@ var
 	mongoose = require('mongoose'),
 	Schema = mongoose.Schema
 
-var jobSchema = new Schema({
+var droneSchema = new Schema({
 	title: { type: String, required: true},
 	company: { type: String, required: true},
 	location: String,
@@ -12,11 +12,11 @@ var jobSchema = new Schema({
 	phone: String,
 	notes: String,
 	owner: String,
-	resumeDate: String,
+	viewDate: String,
 	recentUpdate: String,
 	updateNotes: String
 })
 
-var Job = mongoose.model('Job', jobSchema)
+var Drone = mongoose.model('Drone', droneSchema)
 
-module.exports = Job
+module.exports = Drone
