@@ -19,7 +19,7 @@
 
 		      .when('/:username/drones', {
 		        templateUrl: 'partials/drone-list.html',
-		        controller: 'droneController',
+		        controller: 'dronesController',
 		        controllerAs: 'dronesCtrl'
 		      })
 

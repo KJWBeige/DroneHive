@@ -17,7 +17,7 @@
         <li ng-show="!main.user"><a href="#/login">Login</a></li>
         <li ng-show="!main.user"><a href="#/signup">Signup</a></li>
         <li ng-show="main.user"><a href="#/drones/new">New Drone</a></li>
-        <li ng-show="main.user"><a href="#/{{main.user.username}}/jobs">My Drone Board</a></li>
+        <li ng-show="main.user"><a href="#/{{main.user.username}}/drones">My Drone Board</a></li>
         <li ng-show="main.user"><a href="#/" ng-click="main.doLogout()">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

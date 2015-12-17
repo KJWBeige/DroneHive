@@ -32,7 +32,7 @@ apiRouter.route('/drones')
 		newDrone.resumeDate = req.body.viewDate
 		newDrone.recentUpdate = req.body.recentUpdate
 		newDrone.updateNotes = req.body.updateNotes
-		newDrone.save(function(err, job){
+		newDrone.save(function(err, drone){
 			if(err) throw err
 			res.json({message: "Drone Saved!", drone: drone})
 		})

@@ -8,7 +8,7 @@ var
 	bodyParser = require('body-parser'),
 	apiRoutes = require('./routes/api.js')
 
-mongoose.connect('mongodb://localhost/jobs', function(err){
+mongoose.connect('mongodb://localhost/drones', function(err){
 	if(err) throw err
 	console.log('Connected to MongoDB')
 })

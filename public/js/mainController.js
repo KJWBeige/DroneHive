@@ -29,7 +29,7 @@ angular.module('mainCtrl', [])
 				mainCtrl.processing = false
 				console.log(data)
 				if ( data.success ){
-					$location.path('/jobs')
+					$location.path('/drones')
 				}
 				else {
 					mainCtrl.error = data.message
