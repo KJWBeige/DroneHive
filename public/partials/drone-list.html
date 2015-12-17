@@ -1,10 +1,11 @@
 <h2 ng-show="dronesCtrl.drones.length">My Drones:</h2>
 <div class="list-group">
 	<a ng-repeat="drone in dronesCtrl.drones" href="#/drones/{{ drone._id }}" class="list-group-item">
-  		<h3 class="list-group-item-heading">{{ drone.title }} {{ drone.company }}</h3>
-  		<p class="list-group-item-text">{{ drone.location }}</p>
+  		<h3 class="list-group-item-heading">Rotors: {{ drone.rotors }} | Brand: {{ drone.company }}</h3>
+  		<p class="list-group-item-text">Last Seen In: {{ drone.location }}</p>
+		  <p class="list-group-item-text">Est. Peak Alt (ft.): {{ drone.altitude }}</p>
 			<p ng-show="!drone.viewDate">Not yet been submitted</p><br>
-				<span ng-show="drone.viewDate">You submitted your submission on {{ drone.viewDate}}</span><br>
+				<span ng-show="drone.viewDate">This Drone Sited On: {{ drone.viewDate}}</span><br>
 				<span ng-show="drone.viewDate">
 					<span ng-show="drone.recentUpdate">Estimated Purpose: {{ drone.recentUpdate }}</span>
 					<span ng-show="!drone.recentUpdate">No Update Yet</span>

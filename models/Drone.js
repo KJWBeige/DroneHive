@@ -3,9 +3,10 @@ var
 	Schema = mongoose.Schema
 
 var droneSchema = new Schema({
-	title: { type: String, required: true},
+	rotors: { type: String, required: true},
 	company: { type: String, required: true},
 	location: String,
+	altitude: Number,
 	description: String,
 	link: String,
 	contact: String,

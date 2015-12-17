@@ -1,10 +1,11 @@
 <div class="panel panel-default" ng-hide="droneDetailCtrl.editing || droneDetailCtrl.status || droneDetailCtrl.view">
 	<div class="panel-heading">
-		<h1>Number Of Rotors: {{ droneDetailCtrl.drone.title }}</h3>
+		<h1>Number Of Rotors: {{ droneDetailCtrl.drone.rotors }}</h3>
 	</div>
 	<div class="panel-body">
 		<h3><strong>Brand</strong>: {{ droneDetailCtrl.drone.company }}</h3>
 		<h3><strong>Location</strong>: {{ droneDetailCtrl.drone.location }}</h3>
+		<h3><strong>Est. Peak Altitude (ft.)</strong>: {{ droneDetailCtrl.drone.altitude }}</h3>
 		<h3><strong>Description</strong>: {{ droneDetailCtrl.drone.description }}</h3>
 		<a ng-show="droneDetailCtrl.drone.link" href="{{ droneDetailCtrl.drone.link }}"> Link To Similar Models</a>
 		<h3><strong>Contact</strong>: {{ droneDetailCtrl.drone.contact }}</h3>
@@ -29,10 +30,10 @@
 </div>
 
 <div class="panel panel-default" ng-show="droneDetailCtrl.status">
-	<h3><strong>ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
+	<h3><strong>Drone ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
 		<div class="panel-heading"><h3 class="panel-title">Status</h3></div>
 		<div class="panel-body">
-				<form ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, droneDetailCtrl.drone.title, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, jobDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
+				<form ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, droneDetailCtrl.drone.rotors, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.altitude, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, jobDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
 			<div class="form-group">
 				<label>Most recent update</label>
 				<input type="text" name="year" ng-model="droneDetailCtrl.drone.recentUpdate" class="form-control" required>
@@ -50,19 +51,22 @@
 </div>
 
 <div class="panel panel-default" ng-show="droneDetailCtrl.editing">
-<h3><strong>ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
+<h3><strong>Drone ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
 	<div class="panel-heading"><h3 class="panel-title">Edit Drone</h3></div>
 	<div class="panel-body">
-		<form class="" ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, droneDetailCtrl.drone.title, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, droneDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
+		<form class="" ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, droneDetailCtrl.drone.rotors, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.altitude, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, droneDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
 			<div class="form-group">
-				<label>Title</label>
-		    	<input type="text" name="title" ng-model="droneDetailCtrl.drone.title" placeholder="Title" class="form-control" required>
+				<label>Rotors</label>
+		    	<input type="text" name="rotors" ng-model="droneDetailCtrl.drone.rotors" placeholder="Number of Rotors" class="form-control" required>
 		    </div>
 			<div class="form-group"><label>Company</label>
 				<input type="text" name="company" ng-model="droneDetailCtrl.drone.company" placeholder="Company" class="form-control" required>
 			</div>
 			<div class="form-group"><label>Location</label>
-				<input type="text" name="location" ng-model="droneDetailCtrl.drone.location" placeholder="Lcoation" class="form-control">
+				<input type="text" name="location" ng-model="droneDetailCtrl.drone.location" placeholder="Location" class="form-control">
+			</div>
+				<div class="form-group"><label>Est. Peak Altitude (ft.)</label>
+				<input type="number" name="location" ng-model="droneDetailCtrl.drone.altitude" class="form-control">
 			</div>
 			<div class="form-group"><label>Description</label>
 				<input type="text" name="description" ng-model="droneDetailCtrl.drone.description" placeholder="Description" class="form-control">
