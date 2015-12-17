@@ -1,0 +1,54 @@
+<div class="panel panel-default">
+	<div class="panel-heading"><h3 class="panel-title">Add A New Drone</h3></div>
+	<div class="panel-body">
+		<form id="new-Drone-form" ng-submit="dronesCtrl.addDrone(dronesCtrl.newDrone.title,dronesCtrl.newDrone.company,dronesCtrl.newDrone.location, dronesCtrl.newDrone.description, dronesCtrl.newDrone.link, dronesCtrl.newDrone.contact, dronesCtrl.newDrone.phone, jobsCtrl.newDrone.notes, dronesCtrl.newDrone.viewDate, dronesCtrl.newDrone.recentUpdate, dronesCtrl.newDrone.updateNotes, main.user.username)">
+			<div class="form-group">
+				<label>How Many Rotors</label>
+		    	<input type="text" name="make" ng-model="dronesCtrl.newDrone.title" placeholder="Rotors" class="form-control" required>
+		    </div>
+			<div class="form-group">
+				<label>Brand</label>
+				<input type="text" name="model" ng-model="dronesCtrl.newDrone.company" placeholder="Brand" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>Location</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.location" placeholder="Location" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Description</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.description" placeholder="Description" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Link To Similar</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.link" placeholder="Link To Similar" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Contact</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.contact" placeholder="Contact" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Phone Number</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.phone" placeholder="Phone Number" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Notes</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.notes" placeholder="Notes" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Submitted on</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.resumeDate" placeholder="Date" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Anticipated Purpose?</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.recentUpdate" placeholder="Purpose" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Flight Pattern?</label>
+				<input type="text" name="year" ng-model="dronesCtrl.newDrone.updateNotes" placeholder="Flight Pattern" class="form-control">
+			</div>
+			<div class="text-center">
+			<button type="submit" class="btn btn-info btn-block">Add Drone</button>
+			</div>
+		</form>
+	</div>
+</div>

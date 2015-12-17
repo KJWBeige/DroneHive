@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#/" ng-transclude>{{ jobsCtrl.name }}</a>
+      <a class="navbar-brand" href="#/" ng-transclude>{{ dronesCtrl.name }}</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -16,7 +16,7 @@
         <li ng-show="main.user"><a href="">My name is {{main.user.name}}</a></li>
         <li ng-show="!main.user"><a href="#/login">Login</a></li>
         <li ng-show="!main.user"><a href="#/signup">Signup</a></li>
-        <li ng-show="main.user"><a href="#/jobs/new">New Drone</a></li>
+        <li ng-show="main.user"><a href="#/drones/new">New Drone</a></li>
         <li ng-show="main.user"><a href="#/{{main.user.username}}/jobs">My Drone Board</a></li>
         <li ng-show="main.user"><a href="#/" ng-click="main.doLogout()">Logout</a></li>
       </ul>

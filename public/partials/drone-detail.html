@@ -1,0 +1,93 @@
+<div class="panel panel-default" ng-hide="droneDetailCtrl.editing || droneDetailCtrl.status || droneDetailCtrl.view">
+	<div class="panel-heading">
+		<h1>Number Of Rotors: {{ droneDetailCtrl.drone.title }}</h3>
+	</div>
+	<div class="panel-body">
+		<h3><strong>Brand</strong>: {{ droneDetailCtrl.drone.company }}</h3>
+		<h3><strong>Location</strong>: {{ droneDetailCtrl.drone.location }}</h3>
+		<h3><strong>Description</strong>: {{ droneDetailCtrl.drone.description }}</h3>
+		<a ng-show="droneDetailCtrl.drone.link" href="{{ droneDetailCtrl.drone.link }}"> Link To Similar Models</a>
+		<h3><strong>Contact</strong>: {{ droneDetailCtrl.drone.contact }}</h3>
+		<h3><strong>Phone</strong>: {{ droneDetailCtrl.drone.phone }}</h3>
+		<h3><strong>Notes</strong>: {{ droneDetailCtrl.drone.notes }}</h3>
+		<h3><strong>Date Of Submission </strong>: {{ droneDetailCtrl.drone.viewDate}}</h3>
+		<h3><strong>Estimated Purpose</strong>: {{ droneDetailCtrl.drone.recentUpdate}}</h3>
+		<h3><strong>Flight Behavior </strong>: {{ droneDetailCtrl.drone.updateNotes }}</h3>
+	</div>
+
+
+
+		<button class="btn btn-warning btn-block" ng-click="droneDetailCtrl.status=!droneDetailCtrl.status">Status Update</button>
+
+	<button class="btn btn-info btn-block" ng-click="droneDetailCtrl.editing=!droneDetailCtrl.editing">Edit Drone</button>
+
+
+
+	<!-- DELETE BUTTON -->
+	<button class="btn btn-danger btn-block" ng-click="droneDetailCtrl.removeDrone(droneDetailCtrl.drone._id, main.user.username)">Delete Drone</button>
+
+</div>
+
+<div class="panel panel-default" ng-show="droneDetailCtrl.status">
+	<h3><strong>ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
+		<div class="panel-heading"><h3 class="panel-title">Status</h3></div>
+		<div class="panel-body">
+				<form ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, droneDetailCtrl.drone.title, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, jobDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
+			<div class="form-group">
+				<label>Most recent update</label>
+				<input type="text" name="year" ng-model="droneDetailCtrl.drone.recentUpdate" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>Notes about the most recent update</label>
+				<input type="text" name="year" ng-model="droneDetailCtrl.drone.updateNotes" placeholder="What was the most recent update about?" class="form-control" required>
+			</div>
+			<div class="text-center">
+				<button type="submit" class="btn btn-info btn-block">Update Status</button>
+			</div>
+		</form>
+		</div>
+	</div>
+</div>
+
+<div class="panel panel-default" ng-show="droneDetailCtrl.editing">
+<h3><strong>ID</strong>: {{ droneDetailCtrl.drone._id }}</h3>
+	<div class="panel-heading"><h3 class="panel-title">Edit Drone</h3></div>
+	<div class="panel-body">
+		<form class="" ng-submit="droneDetailCtrl.updateDrone(droneDetailCtrl.drone._id, jobDetailCtrl.drone.title, droneDetailCtrl.drone.company, droneDetailCtrl.drone.location, droneDetailCtrl.drone.description, droneDetailCtrl.drone.link, droneDetailCtrl.drone.contact, droneDetailCtrl.drone.phone, droneDetailCtrl.drone.notes, droneDetailCtrl.drone.viewDate, droneDetailCtrl.drone.recentUpdate, droneDetailCtrl.drone.updateNotes)">
+			<div class="form-group">
+				<label>Title</label>
+		    	<input type="text" name="title" ng-model="droneDetailCtrl.drone.title" placeholder="Title" class="form-control" required>
+		    </div>
+			<div class="form-group"><label>Company</label>
+				<input type="text" name="company" ng-model="droneDetailCtrl.drone.company" placeholder="Company" class="form-control" required>
+			</div>
+			<div class="form-group"><label>Location</label>
+				<input type="text" name="location" ng-model="droneDetailCtrl.drone.location" placeholder="Lcoation" class="form-control">
+			</div>
+			<div class="form-group"><label>Description</label>
+				<input type="text" name="description" ng-model="droneDetailCtrl.drone.description" placeholder="Description" class="form-control">
+			</div>
+			<div class="form-group"><label>Link</label>
+				<input type="text" name="link" ng-model="droneDetailCtrl.drone.link" placeholder="Link" class="form-control">
+			</div>
+			<div class="form-group"><label>Contact</label>
+				<input type="text" name="contact" ng-model="droneDetailCtrl.drone.contact" placeholder="Contact" class="form-control">
+			</div>
+			<div class="form-group"><label>Phone</label>
+				<input type="text" name="phone" ng-model="droneDetailCtrl.drone.phone" placeholder="Phone" class="form-control">
+			</div>
+			<div class="form-group"><label>Notes</label>
+				<input type="text" name="notes" ng-model="droneDetailCtrl.drone.notes" placeholder="Notes" class="form-control">
+			</div>
+			<div class="form-group">
+				<label>Drone info was submitted on</label>
+				<input type="" name="year" ng-model="droneDetailCtrl.drone.viewDate" class="form-control" required>
+			</div>
+
+			<div class="text-center">
+				<button type="submit" class="btn btn-info btn-block">Update Drone</button>
+			</div>
+
+		</form>
+	</div>
+</div>

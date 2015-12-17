@@ -2,7 +2,7 @@ var
 	express 	 	= require('express'),
 	apiRouter  		= express.Router(),
 	mongoose 	 	= require('mongoose'),
-	Job 			= require('../models/job.js'),
+	Drone 			= require('../models/drone.js'),
 	User 			= require('../models/user.js'),
 	jwt        		= require('jsonwebtoken'),
 	superSecret		= 'frijoles'
@@ -14,69 +14,69 @@ apiRouter.get('/', function(req,res){
 // api endpoint to get user information
 
 
-apiRouter.route('/jobs')
+apiRouter.route('/drones')
 	.get(function(req,res) {
-		res.json({message: "get jobs"})
+		res.json({message: "get drones"})
 	})
 	.post(function(req,res){
-		var newJob = new Job()
-		newJob.title = req.body.title
-		newJob.company = req.body.company
-		newJob.location = req.body.location
-		newJob.description = req.body.description
-		newJob.link = req.body.link
-		newJob.contact = req.body.contact
-		newJob.phone = req.body.phone
-		newJob.notes = req.body.notes
-		newJob.owner = req.body.owner
-		newJob.resumeDate = req.body.resumeDate
-		newJob.recentUpdate = req.body.recentUpdate
-		newJob.updateNotes = req.body.updateNotes
-		newJob.save(function(err, job){
+		var newDrone = new Drone()
+		newDrone.title = req.body.title
+		newDrone.company = req.body.company
+		newDrone.location = req.body.location
+		newDrone.description = req.body.description
+		newDrone.link = req.body.link
+		newDrone.contact = req.body.contact
+		newDrone.phone = req.body.phone
+		newDrone.notes = req.body.notes
+		newDrone.owner = req.body.owner
+		newDrone.resumeDate = req.body.viewDate
+		newDrone.recentUpdate = req.body.recentUpdate
+		newDrone.updateNotes = req.body.updateNotes
+		newDrone.save(function(err, job){
 			if(err) throw err
-			res.json({message: "Job Saved!", job: job})
+			res.json({message: "Drone Saved!", drone: drone})
 		})
 	})
 
-apiRouter.route('/jobs/new')
+apiRouter.route('/drones/new')
 	.get(function(req,res) {
-		res.json({message: "Create a new job entry!"})
+		res.json({message: "Create a new drone entry!"})
 	})
 
-	apiRouter.route('/:username/jobs')
+	apiRouter.route('/:username/drones')
 		.get(function(req,res){
-			Job.find({owner: req.params.username}, function(err, jobs){
-				res.json(jobs)
+			Drone.find({owner: req.params.username}, function(err, drones){
+				res.json(drones)
 			})
 		})
 
-apiRouter.route('/jobs/:id')
+apiRouter.route('/drones/:id')
 	.get(function(req,res){
-		Job.findById(req.params.id, function(err,job){
+		Drone.findById(req.params.id, function(err,drone){
 			if(err) throw err
-			res.json(job)
+			res.json(drone)
 		})
 	})
 	.patch(function(req,res){
-		Job.findOneAndUpdate({_id: req.params.id}, req.body, function(err,job){
+		Drone.findOneAndUpdate({_id: req.params.id}, req.body, function(err,drone){
 			if(err) throw err
-			Job.findById(req.params.id, function(err,updateJob){
-				res.json(updateJob)
+			Drone.findById(req.params.id, function(err,updateDrone){
+				res.json(updateDrone)
 			})
 		})
 	})
 	.delete(function(req,res){
-		Job.findOneAndRemove({_id: req.params.id}, req.body, function(err,job){
+		Drone.findOneAndRemove({_id: req.params.id}, req.body, function(err,drone){
 			if(err) throw err
-			res.json({message:"job deleted!"})
+			res.json({message:"drone deleted!"})
 		})
 	})
 
 
 apiRouter.get('/destroy-all', function(req,res){
-	Job.remove({}, function(err){
+	Drone.remove({}, function(err){
 		if(err) throw err
-		res.json({message: 'All jobs destroyed! Booooom!'})
+		res.json({message: 'All drones destroyed! Booooom!'})
 	})
 })
 
