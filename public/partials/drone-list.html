@@ -1,5 +1,6 @@
 <h2 ng-show="dronesCtrl.drones.length">My Drones:</h2>
-<div class="chart-goes-here"></div>
+<!--<button ng-click="dronesCtrl.createChart(main.user.name)">Load Chart</button>-->
+<div ng-init="dronesCtrl.createChart(main.user.name)" class="chart-goes-here"></div>
 <div class="list-group">
 	<a ng-repeat="drone in dronesCtrl.drones" href="#/drones/{{ drone._id }}" class="list-group-item">
   		<h3 class="list-group-item-heading">Rotors: {{ drone.rotors }} | Brand: {{ drone.company }}</h3>
