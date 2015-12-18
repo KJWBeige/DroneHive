@@ -1,4 +1,4 @@
-# DroneHive
+#DroneHive
 This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create & Destroy on Users.
 
 ####Use Cases
@@ -27,4 +27,8 @@ This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokua
 2. Create a more data intensive database (adding feedback in form of a pie chart)
 3. Display data with more D3 to create a "dashboard"
 4. Add update & read functionality for a user
+
+###PAGE VIEWS
+####Home
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/home.png "Home")
 
