@@ -26,6 +26,8 @@ app.get('/', function(req,res){
 
 app.use('/api', apiRoutes)
 
-app.listen(3000, function(){
-	console.log('Server Listening on port 3000...')
+var port = Number(process.env.PORT || 3000)
+
+app.listen(port, function(){
+	console.log('Server listening on port:'+ port)
 })
