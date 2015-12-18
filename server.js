@@ -6,11 +6,12 @@ var
 	path = require('path'),
 	mongoose = require('mongoose'),
 	bodyParser = require('body-parser'),
-	apiRoutes = require('./routes/api.js')
+	apiRoutes = require('./routes/api.js'),
+	db = process.env.MONGOLAB_URI || 'mongodb://KJWBeige:Stanford2003@ds033145.mongolab.com:33145/dronehive'
 
-mongoose.connect('mongodb://KJWBeige:Stanford2003@ds033145.mongolab.com:33145/dronehive', function(err){     // To run locally =>  'mongodb://localhost/drones'
+mongoose.connect(db, function(err){     // To run locally =>  'mongodb://localhost/drones'
 	if(err) throw err
-	console.log('Connected to MongoDB')   //'mongodb://<KJWBeige>:<Stanford2003>@ds033145.mongolab.com:33145/dronehive'
+	console.log('Connected to MongoDB')   //mongodb://KJWBeige:Stanford2003@ds033145.mongolab.com:33145/dronehive'
 })
 
 app.set('view engine', 'ejs')
@@ -26,7 +27,7 @@ app.get('/', function(req,res){
 
 app.use('/api', apiRoutes)
 
-var port = Number(process.env.PORT || 3000)
+var port = process.env.PORT || 3000
 
 app.listen(port, function(){
 	console.log('Server listening on port:'+ port)
