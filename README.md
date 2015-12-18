@@ -19,9 +19,6 @@ This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokua
 4. Be sure to include the first two fields, they are "required"
 5. In order to display the bar chart on each users "My Drone Board" page, be sure to include "altitude" per drone
 
-###WIREFRAMES
-(to come)
-
 ###WHAT I WOULD LIKE TO DO IN THE FUTURE
 1. Add Google Map API
 2. Create a more data intensive database (adding feedback in form of a pie chart)
@@ -32,3 +29,20 @@ This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokua
 ####Home
 ![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/home.png "Home")
 
+####Sign Up
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/signup.png "Sign Up")
+
+####Log In
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/login.png "Log In")
+
+####Add Drone
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/adddrone.png "Add Drone")
+
+####Add Drone
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/adddrone.png "Add Drone")
+
+####My Drones
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/mydrones.png "My Drones")
+
+####Drone Update & Delete
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/droneupdatedelete.png "Drone Update & Delete")
