@@ -2,11 +2,11 @@
 This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create on Users.
 
 ####Use Cases
-| Commercial    |    Hobbyists   |  Gov't       |
+| Commercial    |    Hobbyists   |       Gov't  |
 | ------------- |:--------------:| ------------:|
-|   Amazon      |    Backyard    |  Police      |
-|   Tesla       |    Organized   | Park Service |
-|   Other       |    Other       |   Emergency  |
+|   Amazon      |      Clubs     |      Police  |
+|   Tesla       |  Competitions  | Park Service |
+|   Domino's    |     Demos      |   Emergency  |
 
 ###WHAT YOU WILL NEED 
 1. npm install
@@ -20,10 +20,12 @@ This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokua
 5. In order to display the bar chart on each users "My Drone Board" page, be sure to include "altitude" per drone
 
 ###WHAT I WOULD LIKE TO DO IN THE FUTURE
-1. Add Google Map API
-2. Create a more data intensive database (adding feedback in form of a pie chart)
-3. Display data with more D3 to create a "dashboard"
-4. Add update & read functionality for a user
+1. Add Google Map API.  To display location data of each drone.  Either capturing data via User upload and displaying on static map.  The potential is someday incorporating GPS data and do live drone tracking. More dependencies here of course.
+2. Capture more data on drones per user in JSON.  Allow for data upload files.
+3. Displaying more data w/D3 to create a robust "dashboard" for Users' drone fleet performance
+4. Displaying more data w/D3 to create an open feedback forum. Search & sort functionality.
+5. Add Update & Delete on Users
+6. Allow for viewing 360 video VR live streaming
 
 ###PAGE VIEWS
 ####Home
