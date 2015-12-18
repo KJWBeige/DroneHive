@@ -29,7 +29,7 @@ This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokua
 
 ###PAGE VIEWS
 ####Home
-![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/home.png "Home")
+![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/newhome.png "Home")
 
 ####Sign Up
 ![alt text](https://raw.githubusercontent.com/KJWBeige/DroneHive/master/public/photos/signup.png "Sign Up")
