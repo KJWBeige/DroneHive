@@ -8,9 +8,9 @@ var
 	bodyParser = require('body-parser'),
 	apiRoutes = require('./routes/api.js')
 
-mongoose.connect('mongodb://localhost/drones', function(err){
+mongoose.connect('mongodb://KJWBeige:Stanford2003@ds033145.mongolab.com:33145/dronehive', function(err){     // To run locally =>  'mongodb://localhost/drones'
 	if(err) throw err
-	console.log('Connected to MongoDB')
+	console.log('Connected to MongoDB')   //'mongodb://<KJWBeige>:<Stanford2003>@ds033145.mongolab.com:33145/dronehive'
 })
 
 app.set('view engine', 'ejs')
