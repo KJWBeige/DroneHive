@@ -1,12 +1,19 @@
 #DroneHive
-This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create on Users.
+This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by those operating fleets of drones of various sizes, in both private and public sectors. The rising adoption of drones represents a net benefit to society.  Although implications to business models, regulation and ethics are key to understand. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones, Create on Users.  User authentication.
 
 ####Use Cases
-| Commercial    |    Hobbyists   |       Gov't  |
-| ------------- |:--------------:| ------------:|
-|   Amazon      |      Clubs     |      Police  |
-|   Tesla       |  Competitions  | Park Service |
-|   Domino's    |     Demos      |   Emergency  |
+| Commercial    |    Hobbyists   |      Gov't    |     Non-Profit   |
+| ------------- |:--------------:| -------------:|-----------------:|
+|   Amazon      |      Clubs     |      Police   |        NGO's     |
+|   Tesla       |  Competitions  |  Park Service |        UN        |
+|   Domino's    |   Videography  |   Emergency   |        WHO       |
+
+###TOOLS USED
+1. MongoDB
+2. ExpressJS
+3. AngularJS
+4. NodeJS
+5. D3 (data visualization)
 
 ###WHAT YOU WILL NEED 
 1. npm install
