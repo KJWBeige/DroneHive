@@ -1,10 +1,10 @@
 #DroneHive
-This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create & Destroy on Users.
+This is the **DroneHive** app. Link [HERE.](https://arcane-mountain-8566.herokuapp.com) The web app is designed for **drone fleet management** by users. This is a MEAN stack app with two models, Users and Drones.  Full CRUD on Drones.  Create on Users.
 
 ####Use Cases
-| Commercial    |    Hobbyists   |    Gov't     |
+| Commercial    |    Hobbyists   |  Gov't       |
 | ------------- |:--------------:| ------------:|
-|   Amazon      |    Backyard    |    Police    |
+|   Amazon      |    Backyard    |  Police      |
 |   Tesla       |    Organized   | Park Service |
 |   Other       |    Other       |   Emergency  |
 
